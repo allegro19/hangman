@@ -11,8 +11,8 @@ def letter_search(letter,word):
 #        print(result)
         search_pointer=result+1
         index_number=[result]
-        return letter
-    searchletter=letter_search
-    index_number=[result,searchletter]
+        return result
+    index_number=[result]
+    
 letter_search('o','school')
 #letter_search(letter,word)
