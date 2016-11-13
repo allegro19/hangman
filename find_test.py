@@ -13,7 +13,9 @@ def letter_search(letter,word):
         index_number.append(result)
     return index_number
 
+def replace_letter(string,number,length_in_sring):
+    string=string+length_in_string 0:number
 
-searchletter=letter_search(letter,word)
+letter_search(letter,word)
 print(searchletter)
 letter_search(letter,word)
