@@ -13,9 +13,12 @@ def letter_search(letter,word):
         index_number.append(result)
     return index_number
 
-def replace_letter(string,number,length_in_sring):
-    string=string+length_in_string 0:number
+def replace_letter(word,number,letter):
+    return word[0:number]+letter+word[number:]
 
+
+
+answer=replace_letter('school',1,'k')
+print(answer)
 letter_search(letter,word)
-print(searchletter)
 letter_search(letter,word)
