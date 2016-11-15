@@ -14,11 +14,12 @@ def letter_search(letter,word):
     return index_number
 
 def replace_letter(word,number,letter):
-    return word[0:number]+letter+word[number:]
+    return word[0:number]+letter+word[number+1:]
 
+def replace_letters(word,numbers,letter):
+    return word
 
-
-answer=replace_letter('school',1,'k')
+answer=replace_letters('school',[1,2,3],'k')
 print(answer)
 letter_search(letter,word)
 letter_search(letter,word)
