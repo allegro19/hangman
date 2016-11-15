@@ -17,6 +17,9 @@ def replace_letter(word,number,letter):
     return word[0:number]+letter+word[number+1:]
 
 def replace_letters(word,numbers,letter):
+    for x in numbers:
+        number=replace_letter(word,x,letter)
+        print(number)   
     return word
 
 answer=replace_letters('school',[1,2,3],'k')
