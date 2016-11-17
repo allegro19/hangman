@@ -1,6 +1,6 @@
 print('Type in a word.')
 word=raw_input()
-print('Now type in a letter')
+print('Now type in a letter.')
 letter=raw_input()
 
 def letter_search(letter,word):
@@ -18,8 +18,9 @@ def replace_letter(word,number,letter):
 
 def replace_letters(word,numbers,letter):
     for x in numbers:
-        number=replace_letter(word,x,letter)
-        print(number)   
+        word=replace_letter(word,x,letter)
+        print(word)   
+        
     return word
 
 answer=replace_letters('school',[1,2,3],'k')
