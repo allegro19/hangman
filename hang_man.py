@@ -1,17 +1,12 @@
-target = 'parkrun'
-lives = 9
-word ='-'*len(target)
-print('Guess a letter')
-print(word)
-while True:
-    letter_guess = raw_input()
-    lives = lives-1
-    if lives >=1:
-       print(str(lives) + ' lives left')
-       print(word)
-    if lives <=0:
-
-
+def letter_search(letter,word):
+    index_number=[]
+    search_pointer=0
+    while word.find(letter,search_pointer)!=-1:
+        result=word.find(letter,search_pointer )
+        search_pointer=result+1
+        # index_number=index_number+[result]
+        index_number.append(result)
+    return index_number
 
 
 def replace_letter(word,number,letter):
@@ -34,11 +29,10 @@ while True:
     lives = lives-1
     if lives >=1:
        print(str(lives) + ' lives left')
-       print(word)
+       answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
+       print(answer)
     if lives <=0:
 
-        answer=replace_letters(word,[],letter_guess)
-        print(answer)
 
         break
 
