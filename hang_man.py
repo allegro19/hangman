@@ -4,7 +4,6 @@ def letter_search(letter,word):
     while word.find(letter,search_pointer)!=-1:
         result=word.find(letter,search_pointer )
         search_pointer=result+1
-        # index_number=index_number+[result]
         index_number.append(result)
     return index_number
 
@@ -26,14 +25,14 @@ print('Guess a letter')
 print(word)
 while True:
     letter_guess = raw_input()
-    lives = lives-1
-    if lives >=1:
+    if letter_guess==target:
        print(str(lives) + ' lives left')
        answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
        print(answer)
+    lives = lives-1
     if lives <=0:
 
 
         break
-
 print('GAME OVER!')
+
