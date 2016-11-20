@@ -23,12 +23,19 @@ lives = 9
 word ='-'*len(target)
 print('Guess a letter')
 print(word)
-while True:
+while True: 
     letter_guess = raw_input()
-    if letter_guess==target:
+    if target.find(letter_guess,0)=:
        print(str(lives) + ' lives left')
        answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
        print(answer)
+       #if their letter that they typed in is in the target and tell them how many lives they have.
+else:
+#loose a life
+
+
+
+
     lives = lives-1
     if lives <=0:
 
