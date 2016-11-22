@@ -1,3 +1,4 @@
+import random
 def letter_search(letter,word):
     index_number=[]
     search_pointer=0
@@ -18,7 +19,7 @@ def replace_letters(word,numbers,letter_guess):
         print(word)   
         
     return word
-target = 'parkrun'
+target = ['parkrun','piglet','dog','cherry','flip flops']
 lives = 9
 word ='-'*len(target)
 print('Guess a letter')
@@ -29,22 +30,18 @@ while True:
     letter_guess = raw_input()
     if target.find(letter_guess,0)==-1:
         lives=lives-1
+        print('incccorect guess')
         if lives==0:
             print('GAME OVER!')
-    if target.find(letter_guess,0)!=-1:
-        print('not programed')
-        print(str(lives) + ' lives left')
-        answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
-        print(answer)
-     
+            break
+    else:
+        word=replace_letters(word,letter_search(letter_guess,target),letter_guess)
+        print(word)
+        print('Yes! good guess.')
+        if word==target:
+            print('well done')
+            break 
 
-   # if lives>=1:
-       # print(str(lives) + ' lives left')
-       # answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
-       # print(answer)
+random.choice(target)
 
-
-    if lives<=0:
-        break
-#print('GAME OVER!')
 
