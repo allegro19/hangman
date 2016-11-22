@@ -23,18 +23,28 @@ lives = 9
 word ='-'*len(target)
 print('Guess a letter')
 print(word)
-while True: 
+while True:
+    print(str(lives) + ' lives left')
+    print('please type in a letter.') 
     letter_guess = raw_input()
-    if letter_guess in target:
-#go back to if statment.
-        print('this bit is not programed yet.')
-    else:
-        lives=lives-1        
-        #print(str(lives) + ' lives left')
-        #answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
-        #print(answer)
+    if target.find(letter_guess,0)==-1:
+        lives=lives-1
+        if lives==0:
+            print('GAME OVER!')
+    if target.find(letter_guess,0)!=-1:
+        print('not programed')
+        print(str(lives) + ' lives left')
+        answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
+        print(answer)
+     
 
-    if lives <=0:
+   # if lives>=1:
+       # print(str(lives) + ' lives left')
+       # answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
+       # print(answer)
+
+
+    if lives<=0:
         break
-print('GAME OVER!')
+#print('GAME OVER!')
 
