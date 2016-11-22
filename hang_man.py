@@ -25,21 +25,16 @@ print('Guess a letter')
 print(word)
 while True: 
     letter_guess = raw_input()
-    if target.find(letter_guess,0)=:
-       print(str(lives) + ' lives left')
-       answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
-       print(answer)
-       #if their letter that they typed in is in the target and tell them how many lives they have.
-else:
-#loose a life
+    if letter_guess in target:
+#go back to if statment.
+        print('this bit is not programed yet.')
+    else:
+        lives=lives-1        
+        #print(str(lives) + ' lives left')
+        #answer=replace_letters(word,letter_search(letter_guess,target),letter_guess)
+        #print(answer)
 
-
-
-
-    lives = lives-1
     if lives <=0:
-
-
         break
 print('GAME OVER!')
 
