@@ -1,4 +1,18 @@
 import random
+medium_word = 'parkrun','cherry','bannana','flip flops','school','guitar','camera','pigglet'
+easy_word = 'cat','dog','hat','tree','ziva','sat','cat'
+hard_word = 'adaptation','variation','sufficient','insufficient','systematically'
+print('Hello,please select a level ')
+print('m ,for medium')
+print('e for easy')
+print('h for hard.')
+level = raw_input()
+if level=='m':
+   target = random.choice(medium_word)
+if level=='e':
+    target = random.choice(easy_word)
+if level=='h':
+    target = random.choice(hard_word)
 def letter_search(letter,word):
     index_number=[]
     search_pointer=0
@@ -19,7 +33,6 @@ def replace_letters(word,numbers,letter_guess):
         print(word)   
         
     return word
-target = ['parkrun','piglet','dog','cherry','flip flops']
 lives = 9
 word ='-'*len(target)
 print('Guess a letter')
@@ -30,9 +43,10 @@ while True:
     letter_guess = raw_input()
     if target.find(letter_guess,0)==-1:
         lives=lives-1
-        print('incccorect guess')
+        print('incorrect guess')
         if lives==0:
             print('GAME OVER!')
+            print('your word was' +target)
             break
     else:
         word=replace_letters(word,letter_search(letter_guess,target),letter_guess)
@@ -41,7 +55,9 @@ while True:
         if word==target:
             print('well done')
             break 
-
-random.choice(target)
-
-
+print('would you like to play again?')
+print('y/n')
+play_again=raw_input()
+if play_again=='no':
+    print('Bye bye:)')
+    print('thank you for playing.')
